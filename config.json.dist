@@ -1,0 +1,10 @@
+{
+  "database": "data/fakie.db",
+  "mongodb": {
+    "host": "localhost",
+    "port": 27018,
+    "user": "username",
+    "password": "password",
+    "name": "wiki"
+  }
+}

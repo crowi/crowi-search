@@ -1,0 +1,12 @@
+extends layout
+
+block main
+  .page-header
+    h1 fakie search
+
+  div
+    form(action='/search', method='GET')
+      .form-group
+        input(class='form-control', type='search', size='40', name='q', placeholder='Keywords...')
+      button(class='btn btn-default btn-block') Search
+

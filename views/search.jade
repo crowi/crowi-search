@@ -1,0 +1,28 @@
+extends layout
+
+block main
+
+  .page-header
+    form(action='/search', method='GET', class='form-inline')
+      label(style='margin-right:1em;') fakie search
+      .form-group(style='margin-right:.5em;')
+        input(class='form-control', type='search', size='40', name='q', placeholder='Keywords...', value=q)
+      button(class='btn btn-default') Search
+
+    p.text-right.text-muted
+      small #{ total } Results.
+
+  ul.search-results.list-unstyled
+    each ret in results
+      li
+        a(href='https://wiki.dev.crocos.jp' + ret.path)
+          h4(style="margin-bottom:0;")= ret.path
+        small(style='color:green') wiki.dev.crocos.jp#{ret.path}
+        p(style="margin-bottom:0;")= ret.body.substr(0, 320)
+        p(style="margin:0 0 15px;").text-muted
+          small= moment(ret.updatedAt).fromNow()
+
+  != paginator.render()
+
+  p.text-muted
+    small なんか使ってる pagination ライブラリがバカすぎて辛い。なんか nodejs のステキな pager ライブラリ教えてください。自分で作れって話か...。

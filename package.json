@@ -1,0 +1,25 @@
+{
+  "name": "crowi-search",
+  "version": "1.0.3",
+  "description": "crowi searcher",
+  "main": "app.coffee",
+  "scripts": {
+    "start": "./node_modules/coffee-script/bin/coffee app.coffee",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "https://github.com/crowi/crowi-search",
+  "author": "Keisuke SATO <sato@crocos.co.jp>",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "express": "~3.4.7",
+    "nroonga": "~0.2.5",
+    "coffee-script": "~1.6.3",
+    "jade": "~0.35.0",
+    "mongodb": "~1.3.23",
+    "async": "~0.2.9",
+    "lodash": "~2.4.1",
+    "moment": "~2.5.0",
+    "pagination": "~0.3.7"
+  }
+}
