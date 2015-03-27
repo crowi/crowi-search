@@ -98,6 +98,7 @@ app.get "/search", (req, res) ->
       results: results
       total: total
       paginator: paginator
+      base_url: config.base_url
 
 # Run
 app.listen app.set("port"), ->

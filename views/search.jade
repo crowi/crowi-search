@@ -15,9 +15,9 @@ block main
   ul.search-results.list-unstyled
     each ret in results
       li
-        a(href='https://wiki.dev.crocos.jp' + ret.path)
+        a(href='#{base_url}' + ret.path)
           h4(style="margin-bottom:0;")= ret.path
-        small(style='color:green') wiki.dev.crocos.jp#{ret.path}
+        small(style='color:green') #{base_url}#{ret.path}
         p(style="margin-bottom:0;")= ret.body.substr(0, 320)
         p(style="margin:0 0 15px;").text-muted
           small= moment(ret.updatedAt).fromNow()

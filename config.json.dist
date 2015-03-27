@@ -1,5 +1,6 @@
 {
   "database": "data/fakie.db",
+  "base_url": "http://demo.crowi.wiki",
   "mongodb": {
     "host": "localhost",
     "port": 27018,
